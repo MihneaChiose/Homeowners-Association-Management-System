@@ -16,6 +16,8 @@ The application provides separate workspaces for **association administrators** 
 - **Issue tracking:** view resident reports and move them through `OPEN` → `IN_PROGRESS` → `RESOLVED`.
 - **Announcements:** publish, edit, and withdraw notices on the association's digital noticeboard.
 
+![Administrator Dashboard](docs/screenshots/admin-dashboard.png)
+
 ### Resident dashboard
 
 - **Personal overview:** apartment information, maintenance amount, outstanding invoices, meter-reading status, and active issues.
@@ -189,6 +191,7 @@ The database seed creates these **local-only** accounts:
 4. Back in the administrator account, open **Expenses** (`/admin/cheltuieli`) and enter a monthly expense with an allocation method. For a quick demo without meter readings, choose **Per apartment**.
 5. Open **Maintenance** (`/admin/intretinere`), select the same month and year, **calculate** the maintenance list, review the invoices, and **publish** it.
 6. Sign in as the resident and open **Maintenance & Payments** (`/locatar/intretinere`) to inspect the published invoice and its charge breakdown.
+![Resident Maintenance and Payments](docs/screenshots/resident-maintenance.png)
 7. With Stripe test mode configured, select **Pay online** to complete a simulated checkout. The invoice is marked as paid after the application receives the verified Stripe webhook.
 8. Explore **Issues** and the **Noticeboard** from both roles to test reporting, status updates, and association announcements.
 
