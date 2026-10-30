@@ -1,8 +1,8 @@
 # Homeowners Association Management System
 
-A full-stack web application for managing homeowners associations, built as a bachelor's thesis project. It brings apartment administration, utility meter readings, monthly maintenance calculations, invoices, online payments, issue reporting, and resident communication into one platform.
+A full-stack web application for managing homeowners associations. It brings apartment administration, utility meter readings, monthly maintenance calculations, invoices, online payments, issue reporting, and resident communication into one platform.
 
-The application provides separate workspaces for **association administrators** and **residents**, with role-based access to their respective data and workflows. The interface is in **Romanian**, and maintenance charges and payments are handled in **RON**.
+The application provides separate workspaces for **association administrators** and **residents**, with role-based access to their respective data and workflows.
 
 ## Features
 
@@ -35,8 +35,6 @@ The calculation service supports expense allocation according to:
 | Per resident | Proportional to the number of residents |
 | By surface area | Proportional to apartment area |
 | By consumption | Based on utility consumption determined from meter readings |
-
-An additional `CUSTOM` strategy exists in the calculation code, but **custom allocation is not available in the expense-creation interface**.
 
 Maintenance lists are calculated before publication. Lists in `PUBLISHED` or `CLOSED` status are visible to residents; eligible unpaid invoices can be paid through Stripe.
 
@@ -255,9 +253,3 @@ Launch `stripe listen` in a second terminal **only when testing payments**. You 
 - Keep `DATABASE_URL`, `JWT_SECRET`, `STRIPE_SECRET_KEY`, and `STRIPE_WEBHOOK_SECRET` out of source control.
 - The demo credentials, fixed resident initial password, and `/test-db` diagnostic route are intended for **local development** and should be addressed before any public deployment.
 - Run `npm audit`, `npm run lint`, and `npm run build` after changing dependencies.
-
-**Project status:** functional local development/demo application. Production deployment requires additional hardening, secure user onboarding, production credentials, and a hosted database/Stripe webhook configuration.
-
-## About
-
-Developed as a **bachelor's thesis project** focused on digitizing homeowners association administration and making recurring maintenance charges and communications easier to manage for administrators and residents.
